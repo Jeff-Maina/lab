@@ -2,13 +2,13 @@ type ProjectProps = {
     project: string,
     dateCreated: string,
     draft: boolean,
-    complete: boolean,
+    pageLink: string,
 }
 
 export const ProjectsList: Array<ProjectProps> = [{
-    project: "Oppo's password input",
+    project: "Masterclass dropdown menu",
     dateCreated: "Saturday, 2 March 2024",
     draft: false,
-    complete: true
+    pageLink: "/projects/masterclass_dropdown"
 }
 ]
