@@ -7,28 +7,27 @@ const links = [
     link: "Arts & Entertainment",
     nested_items: [
       {
-        link: "Visual Arts",
+        link: "Painting",
         nested_items: [
           {
             user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "Oil Painting",
           },
           {
             user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "Watercolor Techniques",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Alice Smith",
+            class_name: "Abstract Expressionism",
           },
-
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Bob Johnson",
+            class_name: "Palette Knife Art",
+          },
+          {
+            user: "Emma White",
+            class_name: "Mixed Media",
           },
         ],
       },
@@ -36,59 +35,41 @@ const links = [
         link: "Photography",
         nested_items: [
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Charlie Brown",
+            class_name: "Nature Photography",
           },
           {
             user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "Portrait Photography",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "David Smith",
+            class_name: "Architectural Photography",
+          },
+          {
+            user: "Emily Taylor",
+            class_name: "Fashion Photography",
           },
         ],
       },
       {
-        link: "Comedy",
+        link: "Stand-up Comedy",
         nested_items: [
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Eva Green",
+            class_name: "Observational Comedy",
           },
           {
-            user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Frank White",
+            class_name: "Political Satire",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-        ],
-      },
-      {
-        link: "Comedy",
-        nested_items: [
-          {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Grace Miller",
+            class_name: "Improv Comedy",
           },
           {
-            user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-          {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Harry Black",
+            class_name: "Physical Comedy",
           },
         ],
       },
@@ -98,122 +79,65 @@ const links = [
     link: "Business",
     nested_items: [
       {
-        link: "Visual Arts",
+        link: "Entrepreneurship",
         nested_items: [
           {
             user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "Startup Strategies",
           },
           {
             user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "Business Ethics",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Alice Smith",
+            class_name: "Innovation in Business",
+          },
+          {
+            user: "Bob Johnson",
+            class_name: "Leadership Development",
           },
         ],
       },
       {
-        link: "Photography",
+        link: "Marketing",
         nested_items: [
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Charlie Brown",
+            class_name: "Digital Marketing",
           },
           {
             user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "Social Media Strategies",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "David Smith",
+            class_name: "Content Marketing",
+          },
+          {
+            user: "Emma White",
+            class_name: "Brand Management",
           },
         ],
       },
       {
-        link: "Comedy",
+        link: "Finance",
         nested_items: [
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Eva Green",
+            class_name: "Personal Finance",
           },
           {
-            user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Frank White",
+            class_name: "Investment Planning",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-        ],
-      },
-      {
-        link: "Visual Arts",
-        nested_items: [
-          {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Grace Miller",
+            class_name: "Financial Modeling",
           },
           {
-            user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-          {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-        ],
-      },
-      {
-        link: "Photography",
-        nested_items: [
-          {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-          {
-            user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-          {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-        ],
-      },
-      {
-        link: "Comedy",
-        nested_items: [
-          {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-          {
-            user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
-          },
-          {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Harry Black",
+            class_name: "Corporate Finance",
           },
         ],
       },
@@ -223,102 +147,177 @@ const links = [
     link: "Design and Style",
     nested_items: [
       {
-        link: "Visual Arts",
+        link: "Fashion Design",
         nested_items: [
           {
             user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "Haute Couture",
           },
           {
             user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "Sustainable Fashion",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Alice Smith",
+            class_name: "Accessory Design",
+          },
+          {
+            user: "Bob Johnson",
+            class_name: "Costume Design",
           },
         ],
       },
       {
-        link: "Photography",
+        link: "Interior Design",
         nested_items: [
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Charlie Brown",
+            class_name: "Residential Interiors",
           },
           {
             user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "Commercial Spaces",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "David Smith",
+            class_name: "Furniture Design",
+          },
+          {
+            user: "Emma White",
+            class_name: "Office Interiors",
           },
         ],
       },
       {
-        link: "Comedy",
+        link: "Comedic Fashion",
         nested_items: [
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Eva Green",
+            class_name: "Fashion Comedy Sketches",
           },
           {
-            user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Frank White",
+            class_name: "Style Satire",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Grace Miller",
+            class_name: "Design Humor",
+          },
+          {
+            user: "Harry Black",
+            class_name: "Fashion Parody",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    link: "Science & Technology",
+    nested_items: [
+      {
+        link: "Physics",
+        nested_items: [
+          {
+            user: "Albert Einstein",
+            class_name: "Theory of Relativity",
+          },
+          {
+            user: "Marie Curie",
+            class_name: "Quantum Mechanics",
+          },
+          {
+            user: "Isaac Newton",
+            class_name: "Classical Mechanics",
           },
         ],
       },
       {
-        link: "Photography",
+        link: "Computer Science",
         nested_items: [
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Ada Lovelace",
+            class_name: "Intro to Programming",
           },
           {
-            user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Alan Turing",
+            class_name: "Artificial Intelligence",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Grace Hopper",
+            class_name: "Data Structures",
           },
         ],
       },
       {
-        link: "Comedy",
+        link: "Space Exploration",
         nested_items: [
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Neil Armstrong",
+            class_name: "Moon Landing History",
           },
+          {
+            user: "Sally Ride",
+            class_name: "Orbital Mechanics",
+          },
+          {
+            user: "Elon Musk",
+            class_name: "Future of Space Travel",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    link: "Health & Wellness",
+    nested_items: [
+      {
+        link: "Nutrition",
+        nested_items: [
+          {
+            user: "Dr. John Smith",
+            class_name: "Healthy Eating Habits",
+          },
+          {
+            user: "Alice Green",
+            class_name: "Vegetarian Diet",
+          },
+          {
+            user: "Bob Johnson",
+            class_name: "Sports Nutrition",
+          },
+        ],
+      },
+      {
+        link: "Mental Health",
+        nested_items: [
+          {
+            user: "Dr. Emily White",
+            class_name: "Mindfulness Meditation",
+          },
+          {
+            user: "David Miller",
+            class_name: "Stress Management",
+          },
+          {
+            user: "Eva Green",
+            class_name: "Positive Psychology",
+          },
+        ],
+      },
+      {
+        link: "Fitness",
+        nested_items: [
           {
             user: "Jane Doe",
-            class_name: "Description",
-            user_pfp: "",
+            class_name: "HIIT Workouts",
           },
           {
-            user: "John Doe",
-            class_name: "Description",
-            user_pfp: "",
+            user: "Frank White",
+            class_name: "Yoga for Beginners",
+          },
+          {
+            user: "Grace Miller",
+            class_name: "Cardiovascular Training",
           },
         ],
       },
@@ -331,7 +330,6 @@ type ItemProps = {
   nested_items: {
     user: string;
     class_name: string;
-    user_pfp: string;
   }[];
 };
 
@@ -343,26 +341,48 @@ interface ProfileItems {
   nested_items: {
     user: string;
     class_name: string;
-    user_pfp: string;
   }[];
   index: number;
 }
 
+const colors = [
+  "#4CAF50", // Green
+  "#2196F3", // Blue
+  "#FFC107", // Amber
+  "#FF5722", // Deep Orange
+  "#673AB7", // Deep Purple
+  "#FF9800", // Orange
+  "#9C27B0", // Purple
+  "#00BCD4", // Cyan
+  "#E91E63", // Pink
+  "#795548", // Brown
+];
+
 const ProfileMenu: FC<ProfileItems> = ({ nested_items, index }) => {
+  const numberOfColors = colors.length;
+  const randomIndex = Math.floor(Math.random() * numberOfColors);
+
   return (
     <div
       className={`absolute ${
         index === 0 || index === 1 ? "top-0" : "top-2/4 -translate-y-2/4"
-      } left-full shadow shadow-[#1a1a1a] border border-[#303136] rounded-[0.7rem] p-3 bg-[#0d0d0e]  w-64`}
+      } left-full shadow-xl shadow-[#525252] border border-[#303136] rounded-[0.7rem] p-3 bg-[#0d0d0e]  w-64`}
     >
       <ul className="text-white w-full flex flex-col">
         {nested_items.map((link, index) => {
           return (
             <button className="w-full relative flex items-center gap-3 p-2 hover:bg-[#2a2a2a] rounded-[0.4rem] cursor-pointer">
-              <div className="size-10 bg-white rounded-[0.3rem]"></div>
-              <div className="text-white flex flex-col">
+              <div
+                style={{
+                  backgroundColor: `${colors[index]}`,
+                }}
+                className="!size-10 min-w-10 rounded-[0.3rem] overflow-hidden"
+              ></div>
+              <div className="text-white flex flex-col !items-start justify-start">
                 <p>{link.user}</p>
-                <small className="text-zinc-400">{link.class_name}</small>
+                <small className="text-zinc-400 truncate w-full">
+                  {link.class_name}
+                </small>
               </div>
             </button>
           );
@@ -379,7 +399,7 @@ const Menu: FC<MenuProps> = ({ nested_items }) => {
     setActiveLinkIndex(newIndex);
   };
   return (
-    <div className="absolute top-2/4 -translate-y-2/4 left-full shadow shadow-[#1a1a1a] border border-[#303136] rounded-[0.7rem] p-3 bg-[#0d0d0e]  w-64">
+    <div className="absolute top-2/4 -translate-y-2/4 left-full shadow-xl shadow-[#525252] border border-[#303136] rounded-[0.7rem] p-3 bg-[#0d0d0e]  w-64">
       <ul className="text-white w-full">
         {nested_items.map((link, index) => {
           const isLinkActive = index === activeLinkIndex;
@@ -405,8 +425,15 @@ const Menu: FC<MenuProps> = ({ nested_items }) => {
 
 const page: FC = () => {
   const [isDropdownActive, setDropdownActive] = useState(false);
-  const toggleDropdown = () => setDropdownActive(!isDropdownActive);
   const [activeLinkIndex, setActiveLinkIndex] = useState(1000);
+
+
+  const toggleDropdown = () => {
+    setDropdownActive(!isDropdownActive);
+    if (!isDropdownActive) {
+      setActiveLinkIndex(1000);
+    }
+  };
   const handleDropDown = (index: number) => {
     const newIndex = index === activeLinkIndex ? 1000 : index;
     setActiveLinkIndex(newIndex);
@@ -445,7 +472,7 @@ const page: FC = () => {
                     <li className=" w-full relative">
                       <button
                         onClick={() => handleDropDown(index)}
-                        className="p-3 rounded-[0.4rem] font-medium hover:bg-[#2a2a2a] cursor-pointer flex items-center justify-between w-full select-none"
+                        className="p-3 rounded-[0.4rem] font-medium hover:bg-[#2a2a2a] cursor-pointer flex items-center justify-between w-full select-none relative"
                       >
                         <span className="select-none">{link.link}</span>
                         <ChevronRight size={18} className="stroke-white" />
