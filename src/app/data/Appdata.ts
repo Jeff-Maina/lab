@@ -10,5 +10,10 @@ export const ProjectsList: Array<ProjectProps> = [{
     dateCreated: "Saturday, 2 March 2024",
     draft: false,
     pageLink: "/projects/masterclass_dropdown"
+}, {
+    project: "Grid hover effect concept.",
+    dateCreated: "Sunday, 3 March 2024",
+    draft: false,
+    pageLink: "/projects/grid_hover"
 }
 ]

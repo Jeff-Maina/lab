@@ -26,8 +26,13 @@ const page: FC = () => {
       <div className="md:hidden">
         <p>View on Larger screen</p>
       </div>
-      <div className="hidden md:block w-full rounded border bg-zinc-100/70 h-[80vh] p-10 lg:p-20">
-        <div className="relative">
+      <div
+        className="hidden md:block w-full rounded border bg-zinc-100/70 h-[80vh] p-10 lg:p-20"
+        onClick={(e) => {
+          setDropdownActive(false);
+        }}
+      >
+        <div onClick={(e) => e.stopPropagation()} className="relative">
           <button
             onClick={toggleDropdown}
             className="bg-[#222326] font-semibold text-white py-3 px-6 flex items-center gap-1 rounded-[15px]"
