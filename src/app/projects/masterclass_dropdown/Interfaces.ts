@@ -18,8 +18,22 @@ interface ProfileItems {
 interface IndicatorProps {
     layoutId: string;
 }
+
+interface MenuLinkProps {
+    handleItem: () => void,
+    hoverItem: () => void,
+    resetIndicator: () => void,
+    link: {
+        link: string;
+        nested_items: any[];
+    },
+    isLinkHovered: boolean,
+    indicatorId: string
+}
+
 export type {
     MenuProps,
     ProfileItems,
-    IndicatorProps
+    IndicatorProps,
+    MenuLinkProps
 }
