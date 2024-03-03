@@ -13,7 +13,7 @@ const AddMenu: FC<AddMenuProps> = ({ isAddMenuActive, closeAddMenu }) => {
           initial="initial"
           animate="active"
           exit="inactive"
-          className="absolute z-40 bg-[#0e0d0d] bottom-0 right-0 rounded-[30px] shadow-xl p-6 overflow-hidden"
+          className="absolute bg-[#0e0d0d] bottom-0 right-0 rounded-[30px] shadow-xl p-6 overflow-hidden origin-bottom-right"
         >
           <motion.div
             variants={opacityVariants}

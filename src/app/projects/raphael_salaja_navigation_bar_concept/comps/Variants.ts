@@ -75,13 +75,13 @@ export const opacityVariants = {
 export const AddMenuVariants = {
     initial: {
         x: "0%",
-        // opacity: 0,
         height: 56,
         width: 56,
+        zIndex: 10
     },
     active: {
         x: "18.8%",
-        // opacity: 1,
+        zIndex: 40,
         height: 300,
         width: 350,
         transition: {
@@ -101,7 +101,7 @@ export const AddMenuVariants = {
     },
     inactive: {
         x: "0%",
-        // opacity: 0,
+        zIndex: 10,
         height: 56,
         width: 56,
         transition: {

@@ -16,7 +16,7 @@ const SearchBar: FC<SearchbarProps> = ({
           initial="initial"
           animate="active"
           exit="inactive"
-          className="absolute left-2/4 -translate-x-2/4 bg-black top-2/4 -translate-y-2/4 rounded-full"
+          className="absolute left-2/4 shadow-xl -translate-x-2/4 bg-black top-2/4 -translate-y-2/4 rounded-full"
         >
           <motion.div
             variants={opacityVariants}

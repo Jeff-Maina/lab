@@ -52,7 +52,7 @@ const Page: FC = () => {
         </p>
         <small className="text-zinc-500">Saturday, 2 March 2024</small>
       </header>
-      <div className="w-full m-auto rounded border bg-zinc-100/70 h-[80vh] p-10 lg:p-20 flex flex-col items-center justify-end gap-16 relative">
+      <div className="w-full m-auto rounded-[0.5rem] border bg-zinc-100/70 h-[80vh] p-10 lg:p-20 lg:pb-10 flex flex-col items-center justify-end gap-16 relative">
         <div className="w-full h-3/4 relative z-10 rounded-xl overflow-hidden grid  gap-1">
           {arr.map((_, index) => (
             <div
@@ -96,7 +96,7 @@ const Page: FC = () => {
                 toggleMask();
                 toggleAddMenu();
               }}
-              className="w-full h-full grid place-content-center cursor-pointer"
+              className="w-full h-full grid place-content-center cursor-pointer relative z-20"
             >
               <Plus fill="white" size={16} stroke="white" strokeWidth={4} />
             </div>

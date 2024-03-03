@@ -4,7 +4,7 @@ const Footer = () => {
       <p>温故而知新</p>
       <p>
         Made by{" "}
-        <a href="" className="text-black hover:underline">
+        <a href="https://github.com/Jeff-Maina" target="_blank" className="text-black hover:underline">
           Jeff
         </a>
       </p>

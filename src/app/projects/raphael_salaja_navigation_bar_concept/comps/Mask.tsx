@@ -13,7 +13,7 @@ const Mask: FC<MaskProps> = ({ isMaskActive, resetAll }) => {
           animate="active"
           exit="inactive"
           onClick={resetAll}
-          className="absolute inset-0 w-full h-full bg-black/20 backdrop-blur-sm z-20"
+          className="absolute inset-0 w-full h-full bg-black/20 backdrop-blur-lg z-20"
         ></motion.div>
       ) : null}
     </AnimatePresence>
