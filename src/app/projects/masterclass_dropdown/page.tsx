@@ -18,7 +18,14 @@ const page: FC = () => {
         </Link>
         <br />
         <p className="text-xl font-semibold tracking-tight">
-          Masterclass website dropdown.
+          <a
+            href="https://masterclass.com"
+            target="_blank"
+            className="underline decoration-zinc-400"
+          >
+            Masterclass
+          </a>{" "}
+          website dropdown.
         </p>
         <small className="text-zinc-500">Saturday, 2 March 2024</small>
       </header>

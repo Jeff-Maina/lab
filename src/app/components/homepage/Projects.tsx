@@ -36,7 +36,7 @@ const Projects: FC = () => {
                     }}
                     className={`absolute bg-zinc-100 inset-0 w-full h-full rounded-xl opacity-0 group-hover/projects:opacity-100 transition-opacity duration-300 flex items-center md:pl-3 text-xs text-zinc-600`}
                   >
-                    <span className="hidden md:block">0{index}</span>
+                    <span className="hidden md:block">0{index + 1}</span>
                   </motion.div>
                 )}
               </li>

@@ -11,9 +11,9 @@ export const ProjectsList: Array<ProjectProps> = [{
     draft: false,
     pageLink: "/projects/masterclass_dropdown"
 }, {
-    project: "Grid hover effect concept.",
+    project: "Recreating the Gallery Hover Effect from Mr. Pops' Website",
     dateCreated: "Sunday, 3 March 2024",
     draft: false,
-    pageLink: "/projects/grid_hover"
+    pageLink: "/projects/mr_pops_gallery_hover"
 }
 ]
