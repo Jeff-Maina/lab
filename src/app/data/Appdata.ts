@@ -15,5 +15,10 @@ export const ProjectsList: Array<ProjectProps> = [{
     dateCreated: "Sunday, 3 March 2024",
     draft: false,
     pageLink: "/projects/mr_pops_gallery_hover"
+}, {
+    project: "Raphael Salaja's navigation bar concept from twitter",
+    dateCreated: "Sunday, 3 March 2024",
+    draft: false,
+    pageLink: "/projects/raphael_salaja_navigation_bar_concept"
 }
 ]

@@ -28,7 +28,7 @@ const ProfileMenu: FC<ProfileItems> = ({ nested_items, index }) => {
                 }}
                 className="!size-10 min-w-10 rounded-[0.3rem] overflow-hidden relative z-10"
               ></div>
-              <div className="text-white flex flex-col !items-start justify-start relative z-10">
+              <div className="text-white flex flex-col !items-start justify-start relative z-10 select-none">
                 <p>{link.user}</p>
                 <small className="text-zinc-400 truncate w-full">
                   {link.class_name}
