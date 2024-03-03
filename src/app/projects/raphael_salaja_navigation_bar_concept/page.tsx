@@ -16,6 +16,10 @@ interface AddMenuProps {
   isAddMenuActive: boolean;
   closeAddMenu: () => void;
 }
+interface SearchbarProps {
+  isSearchBarActive: boolean;
+  closeSearchBar: () => void;
+}
 
 const MaskVariants = {
   initial: {
@@ -83,6 +87,40 @@ const AddMenuVariants = {
       },
       height: {
         duration: 0.2,
+      },
+    },
+  },
+};
+
+const SearchBarVariants = {
+  initial: {
+    width: 112,
+    zIndex: 10,
+    // opacity: 0,
+  },
+  active: {
+    width: 350,
+    // opacity: 1,
+    zIndex: 30,
+    transition: {
+      width: {
+        duration: 0.2,
+      },
+      opacity: {
+        duration: 0.3,
+      },
+    },
+  },
+  inactive: {
+    width: 112,
+    // opacity: 0,
+    zIndex: 10,
+    transition: {
+      width: {
+        duration: 0.2,
+      },
+      opacity: {
+        duration: 0.5,
       },
     },
   },
@@ -162,7 +200,7 @@ const AddMenu: FC<AddMenuProps> = ({ isAddMenuActive, closeAddMenu }) => {
           initial="initial"
           animate="active"
           exit="inactive"
-          className="absolute z-10 bg-[#0e0d0d] bottom-0 right-0 rounded-[30px] shadow-xl p-6 overflow-hidden"
+          className="absolute z-40 bg-[#0e0d0d] bottom-0 right-0 rounded-[30px] shadow-xl p-6 overflow-hidden"
         >
           <motion.div
             variants={AddMenuContentVariants}
@@ -206,18 +244,72 @@ const AddMenu: FC<AddMenuProps> = ({ isAddMenuActive, closeAddMenu }) => {
   );
 };
 
+const SearchBar: FC<SearchbarProps> = ({
+  isSearchBarActive,
+  closeSearchBar,
+}) => {
+  return (
+    <AnimatePresence mode="wait">
+      {isSearchBarActive ? (
+        <motion.div
+          variants={SearchBarVariants}
+          initial="initial"
+          animate="active"
+          exit="inactive"
+          className="absolute left-2/4 -translate-x-2/4 bg-black h-full top-2/4 -translate-y-2/4 rounded-full"
+        >
+          <motion.div
+            variants={AddMenuContentVariants}
+            initial="initial"
+            animate="active"
+            exit="inactive"
+            className="w-full h-full rounded-full z-20 flex items-center justify-between p-4"
+          >
+            <div className="w-3/4">
+              <input
+                type="text"
+                className="outline-none bg-transparent h-full w-full text-white placeholder:text-[#6a6a6a] p-2 pl-4"
+                placeholder="Search"
+              />
+            </div>
+            <div
+              onClick={closeSearchBar}
+              className="bg-[#2a2a2a] p-2 rounded-full"
+            >
+              <X stroke="white" size={14} strokeWidth={3} />
+            </div>
+          </motion.div>
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
+  );
+};
+
 const Page = () => {
   const [isMaskActive, setMaskActive] = useState(false);
-  const toggleMask = () => setMaskActive(!isMaskActive);
   const [isAddMenuActive, setAddMenuActive] = useState(false);
+  const [isSearchBarActive, setIsSearchBarActive] = useState(false);
+  const toggleMask = () => setMaskActive(!isMaskActive);
   const toggleAddMenu = () => setAddMenuActive(!isAddMenuActive);
   const closeAddMenu = () => {
     setMaskActive(false);
     setAddMenuActive(false);
   };
+
+  const openSearchBar = () => {
+    setMaskActive(true);
+
+    setIsSearchBarActive(true);
+  };
+
+  const closeSearchBar = () => {
+    setIsSearchBarActive(false);
+    setMaskActive(false);
+  };
   const resetAll = () => {
     setMaskActive(false);
     setAddMenuActive(false);
+    setIsSearchBarActive(false);
   };
 
   return (
@@ -250,11 +342,20 @@ const Page = () => {
             <Settings fill="white" size={16} stroke="white" />
           </button>
           <div className="rounded-full bg-black shadow-lg flex w-28 justify-evenly">
-            <button className="">
+            <button className="relative z-20">
               <Filter size={16} stroke="white" strokeWidth={3} />
             </button>
             <button className="">
-              <Search size={16} stroke="white" strokeWidth={4} />
+              <div
+                onClick={openSearchBar}
+                className="w-full h-full rounded-full grid place-items-center relative z-20"
+              >
+                <Search size={16} stroke="white" strokeWidth={4} />
+              </div>
+              <SearchBar
+                isSearchBarActive={isSearchBarActive}
+                closeSearchBar={closeSearchBar}
+              />
             </button>
           </div>
           <button className="size-12 bg-black shadow-lg rounded-full flex items-center justify-center relative ">
