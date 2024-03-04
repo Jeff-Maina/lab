@@ -23,7 +23,7 @@ const AddMenu: FC<AddMenuProps> = ({ isAddMenuActive, closeAddMenu }) => {
             className="h-full w-full flex flex-col items-start justify-between overflow-hidden"
           >
             <div className="flex items-center w-full justify-between mb-3">
-              <p className="text-white text-lg font-medium">Create a new Bit</p>
+              <p className="text-white text-lg font-semibold">Create a new Bit</p>
               <button
                 onClick={closeAddMenu}
                 className="bg-[#2a2a2a] p-2 rounded-full"

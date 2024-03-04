@@ -22,7 +22,7 @@ export const MaskVariants = {
 
 export const SearchBarVariants = {
     initial: {
-        width: 112,
+        width: 96,
         zIndex: 10,
         height: "100%"
     },
@@ -32,7 +32,7 @@ export const SearchBarVariants = {
         height: "120%",
         transition: {
             width: {
-                duration: 0.2,
+                duration: 0.25,
             },
             height: {
                 duration: 0.1,
@@ -40,20 +40,19 @@ export const SearchBarVariants = {
         },
     },
     inactive: {
-        width: 112,
+        width: 96,
         zIndex: 10,
         height: "100%",
         transition: {
             width: {
                 duration: 0.3,
             },
-            hieght: {
-                duration: 0.1,
+            height: {
+                duration: 0.25,
             },
         },
     },
 };
-
 export const opacityVariants = {
     initial: {
         opacity: 0,
@@ -61,62 +60,98 @@ export const opacityVariants = {
     active: {
         opacity: 1,
         transition: {
-            duration: 0.2,
-            delay: 0.16,
+            duration: 0.25,
+            delay: 0.17,
         },
     },
     inactive: {
         opacity: 0,
         transition: {
-            duration: 0,
+            duration: 0.02,
         },
     },
 };
 export const AddMenuVariants = {
     initial: {
         x: "0%",
-        height: 56,
-        width: 56,
+        height: 48,
+        width: 48,
         zIndex: 10
     },
     active: {
-        x: "18.8%",
+        x: "17%",
         zIndex: 40,
         height: 300,
         width: 350,
+
         transition: {
             x: {
-                duration: 0.2,
+                duration: 0.25,
             },
             opacity: {
-                duration: 0.2,
+                duration: 0.25,
             },
             width: {
-                duration: 0.2,
+                duration: 0.25,
             },
             height: {
-                duration: 0.2,
+                duration: 0.25,
             },
         },
     },
     inactive: {
         x: "0%",
         zIndex: 10,
-        height: 56,
-        width: 56,
+        height: 48,
+        width: 48,
         transition: {
             x: {
-                duration: 0.2,
+                duration: 0.25,
             },
             opacity: {
-                duration: 0.2,
+                duration: 0.25,
             },
             width: {
-                duration: 0.2,
+                duration: 0.25,
             },
             height: {
-                duration: 0.2,
+                duration: 0.25,
             },
         },
     },
 };
+
+export const FilterMenuVariants = {
+    initial: {
+        height: 48,
+        width: 128,
+        zIndex: 10,
+    },
+    active: {
+        height: 360,
+        width: 320,
+        zIndex: 50,
+        transition: {
+            height: {
+                duration: 0.25
+            },
+            width: {
+                duration: 0.25
+            }
+        }
+    },
+    inactive: {
+        height: 48,
+        width: 128,
+        zIndex: 10,
+        transition: {
+            height: {
+                duration: 0.25
+            },
+            width: {
+                duration: 0.25
+            }
+        }
+    }
+
+}

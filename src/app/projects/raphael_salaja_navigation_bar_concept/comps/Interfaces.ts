@@ -13,7 +13,11 @@ interface AddMenuProps {
     closeAddMenu: () => void;
 }
 
+interface FilterMenuProps {
+    isFIlterMenuActive: boolean;
+    closeFilterMenu: () => void;
+}
 
 export type {
-    MaskProps, SearchbarProps,AddMenuProps
+    MaskProps, SearchbarProps, AddMenuProps, FilterMenuProps
 }
