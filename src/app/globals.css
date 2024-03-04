@@ -6,3 +6,7 @@
   background-color: rgb(219, 219, 219);
   color: black;
 }
+
+html {
+  /* scroll-behavior: smooth !important; */
+}

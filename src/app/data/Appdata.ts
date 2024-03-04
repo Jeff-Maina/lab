@@ -20,5 +20,15 @@ export const ProjectsList: Array<ProjectProps> = [{
     dateCreated: "Sunday, 3 March 2024",
     draft: false,
     pageLink: "/projects/raphael_salaja_navigation_bar_concept"
+}, {
+    project: "Fixed vertical navigation bar",
+    dateCreated: "Monday, 4 March 2024",
+    draft: false,
+    pageLink: "/projects/fixed_vertical_navigation_bar"
+}, {
+    project: "Fixed vertical navigation bar",
+    dateCreated: "Monday, 4 March 2024",
+    draft: false,
+    pageLink: "/projects/fixed_vertical_navigation_bar"
 }
 ]
