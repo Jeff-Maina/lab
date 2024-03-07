@@ -4,18 +4,21 @@ import { ProjectsList } from "@/app/data/Appdata";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FC, useState } from "react";
+
+const FinishedProjects = ProjectsList.filter((project) => !project.draft);
+
 const Projects: FC = () => {
   const [hoveredProjectIndex, setHoveredProjectIndex] = useState<number>(1000);
   const hoverProject = (index: number) => setHoveredProjectIndex(index);
+
   return (
     <section>
       <ul className="flex flex-col w-full group/projects">
-        {ProjectsList.map((project, index) => {
+        {FinishedProjects.map((project, index) => {
           const isHovered = index === hoveredProjectIndex;
           return (
-            <Link href={project.pageLink}>
+            <Link href={project.pageLink} key={index}>
               <li
-                key={index}
                 onMouseEnter={() => hoverProject(index)}
                 onClick={() => hoverProject(index)}
                 className={` p-3 md:px-6 md:pl-10 rounded-[0.7rem] cursor-pointer relative`}

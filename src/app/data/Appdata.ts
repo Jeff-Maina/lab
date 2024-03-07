@@ -21,14 +21,19 @@ export const ProjectsList: Array<ProjectProps> = [{
     draft: false,
     pageLink: "/projects/raphael_salaja_navigation_bar_concept"
 }, {
-    project: "Fixed vertical navigation bar",
+    project: "Fixed vertical navigation bar (scrollspy)",
     dateCreated: "Monday, 4 March 2024",
     draft: false,
     pageLink: "/projects/fixed_vertical_navigation_bar"
 }, {
-    project: "Fixed vertical navigation bar",
+    project: "Framer motion velocity-based animation",
     dateCreated: "Monday, 4 March 2024",
+    draft: true,
+    pageLink: "/projects/framer_motion_velocity"
+}, {
+    project: "Vercel's navigation bar",
+    dateCreated: "Thursday, 7 March 2024",
     draft: false,
-    pageLink: "/projects/fixed_vertical_navigation_bar"
+    pageLink: "/projects/vercels_navbar"
 }
 ]

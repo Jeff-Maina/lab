@@ -8,15 +8,17 @@ const NavigationBar: FC<NavProps> = ({
   activeSectionIndex,
   updateActiveSection,
 }) => {
-
   // does not work :/ why?
 
-  // const scrollPage = () => {
-  //   const sectionId = sections[activeSectionIndex];
-  //   const sectionElement = document.querySelector(`#${sectionId}`);
-  //   const { top } = sectionElement?.getBoundingClientRect();
-  //   window.scrollTo(0, top);
-  // };
+  const scrollPage = () => {
+    const sectionId = sections[activeSectionIndex];
+    const sectionElement = document.querySelector(`#${sectionId}`);
+    const top = sectionElement?.getBoundingClientRect().top;
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="fixed top-2/4 -translate-y-2/4 md:block hidden left-[0%] lg:left-[10%]">
@@ -32,7 +34,7 @@ const NavigationBar: FC<NavProps> = ({
                     <motion.div
                       layoutId="indicator"
                       transition={{
-                        duration: 0.2,
+                        duration: 0.25,
                       }}
                       className=""
                     >
@@ -60,7 +62,7 @@ const NavigationBar: FC<NavProps> = ({
                   href={`#${section}`}
                   onClick={() => {
                     updateActiveSection(index);
-                    // scrollPage();
+                    scrollPage();
                   }}
                   className={`cursor-pointer ${
                     !isActive ? "text-zinc-500" : "text-black"

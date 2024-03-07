@@ -10,3 +10,11 @@
 html {
   /* scroll-behavior: smooth !important; */
 }
+
+#mask{
+  mask-image: url("../../public/mask.svg");
+  background-color: red;
+  mask-repeat: no-repeat;
+  mask-size: 50px;
+  mask-position: 0;
+}
