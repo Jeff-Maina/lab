@@ -32,7 +32,7 @@ const Links: FC<LinkProps> = ({
 
   const handleLinkHover = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const direction = getDirection(e);
-    console.log(direction);
+    updateDirection(direction);
   };
 
   return (

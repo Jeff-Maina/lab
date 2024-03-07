@@ -1,10 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { MenuVariants } from "./Variants";
 import { FC } from "react";
-import { Menuprops } from "./Interfaces";
+import { Menuprops, submenuprops } from "./Interfaces";
 import { Circle } from "lucide-react";
 
-const ProductsMenu = () => {
+const ProductsMenu: FC = () => {
   return (
     <div className="w-full h-full p-6">
       <div>
@@ -64,7 +64,7 @@ const ProductsMenu = () => {
     </div>
   );
 };
-const SolutionsMenu = () => {
+const SolutionsMenu: FC = () => {
   return (
     <div className="w-full h-full p-6">
       <div>
@@ -124,7 +124,7 @@ const SolutionsMenu = () => {
     </div>
   );
 };
-const ResourcesMenu = () => {
+const ResourcesMenu: FC = () => {
   return (
     <div className="w-full h-full p-6">
       <div>
@@ -184,7 +184,12 @@ const ResourcesMenu = () => {
     </div>
   );
 };
-const Menu: FC<Menuprops> = ({ isAnyLinkHovered, activeMenu,animationDirection }) => {
+
+const Menu: FC<Menuprops> = ({
+  isAnyLinkHovered,
+  activeMenu,
+  animationDirection,
+}) => {
   return (
     <AnimatePresence mode="wait">
       {isAnyLinkHovered && (
@@ -193,12 +198,8 @@ const Menu: FC<Menuprops> = ({ isAnyLinkHovered, activeMenu,animationDirection }
           initial="initial"
           animate="active"
           exit="inactive"
-          className="absolute top-full left-0 h-72 bg-white border w-[30rem] rounded-2xl origin-top border-zinc-200"
-        >
-          {activeMenu === 0 && <ProductsMenu />}
-          {activeMenu === 1 && <SolutionsMenu />}
-          {activeMenu === 2 && <ResourcesMenu />}
-        </motion.div>
+          className="absolute top-full left-0 h-72 bg-white border w-[30rem] rounded-2xl origin-top border-zinc-200 overflow-hidden"
+        ></motion.div>
       )}
     </AnimatePresence>
   );

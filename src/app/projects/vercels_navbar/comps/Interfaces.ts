@@ -9,6 +9,10 @@ interface Menuprops {
     animationDirection: string
 }
 
+interface submenuprops {
+    animationDirection: string
+}
+
 export type {
-    LinkProps, Menuprops,
+    LinkProps, Menuprops, submenuprops
 }
