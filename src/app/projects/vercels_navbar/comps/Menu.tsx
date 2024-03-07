@@ -64,8 +64,127 @@ const ProductsMenu = () => {
     </div>
   );
 };
-
-const Menu: FC<Menuprops> = ({ isAnyLinkHovered }) => {
+const SolutionsMenu = () => {
+  return (
+    <div className="w-full h-full p-6">
+      <div>
+        <p>Solutions</p>
+        <br />
+        <div className="w-fll grid grid-cols-2">
+          <div className="grid gap-4">
+            <div className="flex gap-4 items-center">
+              <div>
+                <Circle size={16} fill="#000" />
+              </div>
+              <div className="text-sm flex flex-col gap-1">
+                <p>Anim sit cupidatat cillum.</p>
+                <p className="text-zinc-500">
+                  Deserunt velit adipisicing culpa nisi quis exercitation.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center">
+              <div>
+                <Circle size={16} fill="#000" />
+              </div>
+              <div className="text-sm flex flex-col gap-1">
+                <p>Anim sit cupidatat cillum.</p>
+                <p className="text-zinc-500">
+                  Deserunt velit adipisicing culpa nisi quis exercitation.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div className="flex gap-4 items-center">
+              <div>
+                <Circle size={16} fill="#" />
+              </div>
+              <div className="text-sm flex flex-col gap-1">
+                <p>Anim sit cupidatat cillum.</p>
+                <p className="text-zinc-500">
+                  Deserunt velit adipisicing culpa nisi quis exercitation.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center">
+              <div>
+                <Circle size={16} fill="#000" />
+              </div>
+              <div className="text-sm flex flex-col gap-1">
+                <p>Anim sit cupidatat cillum.</p>
+                <p className="text-zinc-500">
+                  Deserunt velit adipisicing culpa nisi quis exercitation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const ResourcesMenu = () => {
+  return (
+    <div className="w-full h-full p-6">
+      <div>
+        <p>Resources</p>
+        <br />
+        <div className="w-fll grid grid-cols-2">
+          <div className="grid gap-4">
+            <div className="flex gap-4 items-center">
+              <div>
+                <Circle size={16} fill="#000" />
+              </div>
+              <div className="text-sm flex flex-col gap-1">
+                <p>Anim sit cupidatat cillum.</p>
+                <p className="text-zinc-500">
+                  Deserunt velit adipisicing culpa nisi quis exercitation.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center">
+              <div>
+                <Circle size={16} fill="#000" />
+              </div>
+              <div className="text-sm flex flex-col gap-1">
+                <p>Anim sit cupidatat cillum.</p>
+                <p className="text-zinc-500">
+                  Deserunt velit adipisicing culpa nisi quis exercitation.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div className="flex gap-4 items-center">
+              <div>
+                <Circle size={16} fill="#" />
+              </div>
+              <div className="text-sm flex flex-col gap-1">
+                <p>Anim sit cupidatat cillum.</p>
+                <p className="text-zinc-500">
+                  Deserunt velit adipisicing culpa nisi quis exercitation.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-center">
+              <div>
+                <Circle size={16} fill="#000" />
+              </div>
+              <div className="text-sm flex flex-col gap-1">
+                <p>Anim sit cupidatat cillum.</p>
+                <p className="text-zinc-500">
+                  Deserunt velit adipisicing culpa nisi quis exercitation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const Menu: FC<Menuprops> = ({ isAnyLinkHovered, activeMenu,animationDirection }) => {
   return (
     <AnimatePresence mode="wait">
       {isAnyLinkHovered && (
@@ -76,7 +195,9 @@ const Menu: FC<Menuprops> = ({ isAnyLinkHovered }) => {
           exit="inactive"
           className="absolute top-full left-0 h-72 bg-white border w-[30rem] rounded-2xl origin-top border-zinc-200"
         >
-          <ProductsMenu />
+          {activeMenu === 0 && <ProductsMenu />}
+          {activeMenu === 1 && <SolutionsMenu />}
+          {activeMenu === 2 && <ResourcesMenu />}
         </motion.div>
       )}
     </AnimatePresence>
