@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { NavProps } from "../Interfaces";
-import { Minus, Triangle } from "lucide-react";
+import { Triangle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const NavigationBar: FC<NavProps> = ({
@@ -8,12 +8,14 @@ const NavigationBar: FC<NavProps> = ({
   activeSectionIndex,
   updateActiveSection,
 }) => {
+  
   // does not work :/ why?
 
   const scrollPage = () => {
     const sectionId = sections[activeSectionIndex];
     const sectionElement = document.querySelector(`#${sectionId}`);
     const top = sectionElement?.getBoundingClientRect().top;
+    console.log(top);
     window.scrollTo({
       top,
       behavior: "smooth",
@@ -62,11 +64,11 @@ const NavigationBar: FC<NavProps> = ({
                   href={`#${section}`}
                   onClick={() => {
                     updateActiveSection(index);
-                    scrollPage();
+                    // scrollPage();
                   }}
                   className={`cursor-pointer ${
                     !isActive ? "text-zinc-500" : "text-black"
-                  } hover:text-black transition-all duration-300 uppercase text-sm font-medium`}
+                  } hover:text-black transition-all select-none duration-300 uppercase text-sm font-medium`}
                 >
                   {section}
                 </a>

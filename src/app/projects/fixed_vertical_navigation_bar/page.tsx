@@ -4,7 +4,7 @@ import NavigationBar from "./comps/NavigationBar";
 import { sections } from "./comps/data";
 import Section from "./comps/Section";
 import Link from "next/link";
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "@studio-freight/react-lenis";
 import { ArrowLeft } from "lucide-react";
 
 const page = () => {
@@ -35,11 +35,6 @@ const page = () => {
             updateActiveSection={updateActiveSection}
           />
         ))}
-        <p className="text-sm">
-          <span className="text-red-500">*</span>
-          Setting the page's <code>scroll-behavior</code> to <code>smooth</code>{" "}
-          makes the animation "buggy".
-        </p>
       </section>
     </ReactLenis>
   );
