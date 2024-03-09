@@ -26,7 +26,10 @@ const Page = () => {
       <div className="hidden md:flex w-full rounded border bg-zinc-100/70 h-[80vh] p-10 lg:p-20 justify-center">
         <Navbar />
       </div>
-      <p>[ work in progress ]</p>
+      <div className="md:hidden">
+        <p className="text-sm">[ Not optimized for small screens. Please switch to a larger screen. ]</p>
+      </div>
+      <p className="hidden md:block">[ work in progress ]</p>
     </main>
   );
 };

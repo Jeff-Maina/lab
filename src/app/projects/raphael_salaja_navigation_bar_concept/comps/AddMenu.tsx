@@ -40,13 +40,13 @@ const AddMenu: FC<AddMenuProps> = ({ isAddMenuActive, closeAddMenu }) => {
             <div className="w-full bg-[#2a2a2a] rounded-[10px]">
               <input
                 type="text"
-                className="p-2 w-full bg-transparent text-white pl-4 placeholder:text-[#6a6a6a] rounded-[10px] outline-none focus:border"
+                className="p-3 w-full bg-transparent text-white placeholder:text-[#6a6a6a] rounded-[10px] outline-none focus:border"
                 placeholder="Enter url"
               />
             </div>
             <button
               onClick={closeAddMenu}
-              className="p-2 bg-blue-600 w-full rounded-[10px] text-white font-medium hover:bg-blue-800 transition-all duration-200"
+              className="p-3 bg-blue-600 w-full rounded-[10px] text-white font-medium hover:bg-blue-800 transition-all duration-200"
             >
               continue
             </button>

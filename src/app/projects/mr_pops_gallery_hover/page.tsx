@@ -102,7 +102,11 @@ const page = () => {
         <br />
         <p className="text-xl font-semibold tracking-tight">
           Recreating the Gallery Hover Effect from{" "}
-          <a href="https://mrpops.ua/en" target="_blank" className="underline decoration-yellow-400 ">
+          <a
+            href="https://mrpops.ua/en"
+            target="_blank"
+            className="underline decoration-yellow-400 "
+          >
             Mr. Pops'
           </a>{" "}
           Website
@@ -129,6 +133,11 @@ const page = () => {
             );
           })}
         </div>
+      </div>
+      <div className="md:hidden">
+        <p className="text-sm">
+          [ Not optimized for small screens. Please switch to a larger screen. ]
+        </p>
       </div>
     </main>
   );

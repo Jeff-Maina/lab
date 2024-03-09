@@ -36,21 +36,21 @@ const FilterMenu: FC<FilterMenuProps> = ({
             </div>
             <div className="w-full h-[80%]  flex flex-col justify-between text-white text-sm">
               <div className="grid gap-3">
-                <div className="w-full bg-[#2a2a2a] p-4 rounded-[0.7rem] flex items-center justify-between">
+                <div className="w-full bg-[#2a2a2a] p-3 rounded-[0.7rem] flex items-center justify-between">
                   <div className="flex items-center gap-3 text-[#7a7a7a] font-medium">
                     <Calendar stroke={"#7a7a7a"} size={18} />
                     <p>Date Created</p>
                   </div>
                   <div></div>
                 </div>
-                <div className="w-full bg-[#2a2a2a] p-4 rounded-[0.7rem] flex items-center justify-between">
+                <div className="w-full bg-[#2a2a2a] p-3 rounded-[0.7rem] flex items-center justify-between">
                   <div className="flex items-center gap-3 text-[#7a7a7a] font-medium">
                     <Languages stroke={"#7a7a7a"} size={18} />
                     <p>Language</p>
                   </div>
                   <div></div>
                 </div>
-                <div className="w-full bg-[#2a2a2a] p-4 rounded-[0.7rem] flex items-center justify-between">
+                <div className="w-full bg-[#2a2a2a] p-3 rounded-[0.7rem] flex items-center justify-between">
                   <div className="flex gap-2 text-[#7a7a7a] font-medium">
                     <ALargeSmall stroke={"#7a7a7a"} size={20} />
                     <p>Title</p>
@@ -61,7 +61,7 @@ const FilterMenu: FC<FilterMenuProps> = ({
 
               <button
                 onClick={closeFilterMenu}
-                className="p-4 bg-blue-600 w-full rounded-[16px] text-white font-medium hover:bg-blue-800 transition-all duration-200"
+                className="p-3 bg-blue-600 w-full rounded-[16px] text-white font-medium hover:bg-blue-800 transition-all duration-200"
               >
                 Confirm
               </button>

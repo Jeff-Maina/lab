@@ -128,7 +128,7 @@ export const FilterMenuVariants = {
         zIndex: 10,
     },
     active: {
-        height: 360,
+        height: 320,
         width: 320,
         zIndex: 50,
         transition: {

@@ -30,9 +30,6 @@ const page: FC = () => {
         <small className="text-zinc-500">Saturday, 2 March 2024</small>
       </header>
       {/* for mobile screens */}
-      <div className="md:hidden">
-        <p>View on Larger screen</p>
-      </div>
       <div
         className="hidden md:block w-full rounded border bg-zinc-100/70 h-[80vh] p-10 lg:p-20"
         onClick={(e) => {
@@ -54,6 +51,11 @@ const page: FC = () => {
           </button>
           {isDropdownActive && <Dropdown />}
         </div>
+      </div>
+      <div className="md:hidden">
+        <p className="text-sm">
+          [ Not optimized for small screens. Please switch to a larger screen. ]
+        </p>
       </div>
     </main>
   );

@@ -36,4 +36,10 @@ export const ProjectsList: Array<ProjectProps> = [{
     draft: false,
     pageLink: "/projects/vercels_navbar"
 }
+    , {
+    project: "Chat GPT's reply feature",
+    dateCreated: "Friday, 8 March 2024",
+    draft: false,
+    pageLink: "/projects/chat_gpt_reply_feature"
+}
 ]

@@ -11,10 +11,20 @@ html {
   /* scroll-behavior: smooth !important; */
 }
 
-#mask{
+#mask {
   mask-image: url("../../public/mask.svg");
   background-color: red;
   mask-repeat: no-repeat;
   mask-size: 50px;
   mask-position: 0;
+}
+
+.reply_box::-webkit-scrollbar {
+  background-color: transparent !important;
+  width: 5px;
+}
+
+.reply_box::-webkit-scrollbar-thumb {
+  background-color: rgb(109, 108, 108) !important;
+  border-radius: 5px;
 }

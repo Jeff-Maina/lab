@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, ListFilter, Palette, Plus, Search,  } from "lucide-react";
+import { ArrowLeft, ListFilter, Palette, Plus, Search } from "lucide-react";
 import Link from "next/link";
 import { FC, useState } from "react";
 import Mask from "./comps/Mask";
@@ -10,10 +10,12 @@ import FilterMenu from "./comps/FilterMenu";
 
 const arr = [1, 2];
 
+
 const Page: FC = () => {
   // MASK LOGIC;
   const [isMaskActive, setMaskActive] = useState(false);
   const toggleMask = () => setMaskActive(!isMaskActive);
+
   const resetAll = () => {
     setMaskActive(false);
     setAddMenuActive(false);
@@ -82,8 +84,11 @@ const Page: FC = () => {
           ))}
         </div>
         <div className="flex gap-1 relative z-30 justify-center">
-          <button disabled className="size-12 bg-black shadow-lg rounded-full flex items-center justify-center cursor-not-allowed">
-            <Palette  size={16} stroke="white" strokeWidth={3} />
+          <button
+            disabled
+            className="size-12 bg-black shadow-lg rounded-full flex items-center justify-center cursor-not-allowed"
+          >
+            <Palette size={16} stroke="white" strokeWidth={3} />
           </button>
           <div className="rounded-full bg-black shadow-lg flex h-12 justify-evenly px-4 relative">
             <button className="relative h-full aspect-square">
@@ -111,7 +116,7 @@ const Page: FC = () => {
               closeFilterMenu={closeFilterMenu}
             />
           </div>
-          <button className="size-12 bg-black shadow-lg rounded-full flex items-center justify-center relative ">
+          <button className="size-12 bg-black shadow-lg rounded-full flex items-center justify-center relative cursor-default">
             <div
               onClick={() => {
                 toggleMask();
@@ -132,7 +137,9 @@ const Page: FC = () => {
         <Mask isMaskActive={isMaskActive} resetAll={resetAll} />
       </div>
       <div className="md:hidden">
-        <p>Preview on larger screen :)</p>
+        <p className="text-sm">
+          [ Not optimized for small screens. Please switch to a larger screen. ]
+        </p>
       </div>
     </main>
   );
