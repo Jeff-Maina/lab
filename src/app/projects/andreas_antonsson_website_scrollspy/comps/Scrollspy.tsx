@@ -27,10 +27,9 @@ const Scrollspy: FC<ScrollSpyProps> = ({ top, activeSectionsIndices }) => {
         return (
           <div
             onClick={() => scrollPage(section)}
-            style={{
-              border: isSectionActive ? "1px solid black" : "1px solid #999",
-            }}
-            className="h-3 lg:h-4 w-4 lg:w-7  rounded-[0.2rem] cursor-pointer transition-all duration-300"
+            className={`h-3 lg:h-4 w-4 lg:w-7  rounded-[0.2rem] border ${
+              isSectionActive ? "border-black" : "border-zinc-300"
+            } hover:border-black cursor-pointer transition-all duration-300`}
           ></div>
         );
       })}
