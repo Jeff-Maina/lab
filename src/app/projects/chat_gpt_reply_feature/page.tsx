@@ -12,7 +12,7 @@ const Page = () => {
     x: 0,
     y: 0,
   });
-  
+
   const [isHighlighting, setIsHighlighting] = useState<boolean>(false);
   const [isReplying, setIsReplying] = useState(false);
 
@@ -90,7 +90,8 @@ const Page = () => {
           </p>
           <small className="text-zinc-500">Friday, 8 March 2024</small>
         </header>
-        <div className="hidden md:flex flex-col w-full rounded border bg-zinc-100/70 min-h-[80vh] p-10 lg:p-20 items-center justify-end md:gap-16">
+        <p className="hidden lg:block">Highlight a section of the poem.</p>
+        <div className="hidden lg:flex flex-col w-full rounded border bg-zinc-100/70 min-h-[80vh] p-10 lg:p-20 items-center justify-end md:gap-16">
           {/* nav */}
           <div className="relative">
             {isHighlighting && (
@@ -142,7 +143,7 @@ const Page = () => {
             closeInputBox={closeInputBox}
           />
         </div>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <p className="text-sm">
             [ Not optimized for small screens. Please switch to a larger
             screen.]
