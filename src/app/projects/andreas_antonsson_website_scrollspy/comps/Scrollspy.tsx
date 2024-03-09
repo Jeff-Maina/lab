@@ -20,14 +20,14 @@ const Scrollspy: FC<ScrollSpyProps> = ({ top, activeSectionsIndices }) => {
   };
 
   return (
-    <div className="hidden fixed bottom-6 md:bottom-10 lg:bottom-20 lg:h-32 right-6 md:right-10 lg:right-20 lg:flex flex-col z-20  lg:justify-evenly w-10 md:w-auto items-center">
+    <div className="hidden fixed bottom-6 md:bottom-10 lg:bottom-20 lg:h-[128px] right-6 md:right-10 lg:right-20 lg:flex flex-col z-20  lg:justify-evenly w-10 md:w-auto items-center">
       {PageSections.map((section, index) => {
         const isSectionActive = activeSectionsIndices.includes(index);
 
         return (
           <div
             onClick={() => scrollPage(section)}
-            className={`h-3 lg:h-4 w-4 lg:w-7  rounded-[0.2rem] border ${
+            className={`h-3 lg:h-[18px] w-4 lg:w-7  rounded-[0.2rem] border ${
               isSectionActive ? "border-black" : "border-zinc-300"
             } hover:border-black cursor-pointer transition-all duration-300`}
           ></div>
