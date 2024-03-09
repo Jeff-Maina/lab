@@ -41,5 +41,11 @@ export const ProjectsList: Array<ProjectProps> = [{
     dateCreated: "Friday, 8 March 2024",
     draft: false,
     pageLink: "/projects/chat_gpt_reply_feature"
+}, {
+    project: "Andreas Antonsson website scrollspy",
+    dateCreated: "Saturday, 9 March 2024",
+    draft: false,
+    pageLink: "/projects/andreas_antonsson_website_scrollspy"
 }
 ]
+

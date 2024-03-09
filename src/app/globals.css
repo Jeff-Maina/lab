@@ -11,6 +11,10 @@ html {
   /* scroll-behavior: smooth !important; */
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 #mask {
   mask-image: url("../../public/mask.svg");
   background-color: red;
@@ -27,4 +31,8 @@ html {
 .reply_box::-webkit-scrollbar-thumb {
   background-color: rgb(109, 108, 108) !important;
   border-radius: 5px;
+}
+
+.no_scrollbar::-webkit-scrollbar {
+  display: none !important;
 }

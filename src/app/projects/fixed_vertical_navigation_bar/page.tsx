@@ -11,7 +11,7 @@ const page = () => {
   const [activeSectionIndex, setActiveSectionIndex] = useState(1000);
   const updateActiveSection = (index: number) => setActiveSectionIndex(index);
   return (
-    // <ReactLenis root options={{ lerp: 0.1 }}>
+    <ReactLenis root options={{ lerp: 0.1 }}>
       <section className="w-full flex flex-col gap-10 max-w-3xl lg:m-auto ml-auto py-10 p-6">
         <header>
           <Link href="/" className="flex items-center gap-1">
