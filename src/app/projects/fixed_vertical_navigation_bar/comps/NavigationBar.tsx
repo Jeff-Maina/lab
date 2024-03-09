@@ -2,6 +2,10 @@ import { FC } from "react";
 import { NavProps } from "../Interfaces";
 import { Triangle } from "lucide-react";
 import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/all";
+
+gsap.registerPlugin(ScrollToPlugin); // (or in the top-level file in your React app)
 
 const NavigationBar: FC<NavProps> = ({
   sections,
@@ -9,16 +13,11 @@ const NavigationBar: FC<NavProps> = ({
   updateActiveSection,
 }) => {
   
-  // does not work :/ why?
-
-  const scrollPage = () => {
-    const sectionId = sections[activeSectionIndex];
-    const sectionElement = document.querySelector(`#${sectionId}`);
-    const top = sectionElement?.getBoundingClientRect().top;
-    console.log(top);
-    window.scrollTo({
-      top,
-      behavior: "smooth",
+  const scrollPage = (id: string) => {
+    gsap.to(window, {
+      duration: 0.5,
+      scrollTo: { y: `#${id}`, offsetY: 200, autoKill: true },
+      ease: "power2",
     });
   };
 
@@ -60,18 +59,18 @@ const NavigationBar: FC<NavProps> = ({
                 </div>
               </div>
               <div>
-                <a
-                  href={`#${section}`}
+                <p
+                  // href={`#${section}`}
                   onClick={() => {
+                    scrollPage(section);
                     updateActiveSection(index);
-                    // scrollPage();
                   }}
                   className={`cursor-pointer ${
                     !isActive ? "text-zinc-500" : "text-black"
                   } hover:text-black transition-all select-none duration-300 uppercase text-sm font-medium`}
                 >
                   {section}
-                </a>
+                </p>
               </div>
             </div>
           );

@@ -14,7 +14,7 @@ const Section: FC<SectionProps> = ({ section, index, updateActiveSection }) => {
 
   return (
     <div ref={ref} key={index} className="w-full grid gap-4 relative">
-      <div id={section} className="absolute -top-1/4"></div>
+      <div id={section} className="absolute"></div>
       <h1 className="text-3xl font-semibold tracking-tighter">{section}</h1>
       <div className="w-full flex flex-col gap-4 ">
         {[1, 2, 3].map((_, index) => {
