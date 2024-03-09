@@ -20,7 +20,7 @@ const Scrollspy: FC<ScrollSpyProps> = ({ top, activeSectionsIndices }) => {
   };
 
   return (
-    <div className="fixed bottom-6 md:bottom-10 lg:bottom-20 lg:h-32 right-6 md:right-10 lg:right-20 flex flex-col z-20  lg:justify-evenly w-10 md:w-auto items-center">
+    <div className="hidden fixed bottom-6 md:bottom-10 lg:bottom-20 lg:h-32 right-6 md:right-10 lg:right-20 lg:flex flex-col z-20  lg:justify-evenly w-10 md:w-auto items-center">
       {PageSections.map((section, index) => {
         const isSectionActive = activeSectionsIndices.includes(index);
 

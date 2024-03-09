@@ -32,17 +32,19 @@ const page: FC = () => {
 
   return (
     <ReactLenis root options={{ lerp: 0.1 }}>
-      <main className="max-w-4xl m-auto w-full min-h-screen">
-        <header className="fixed top-4 left-4 z-50">
+      <main className="max-w-5xl m-auto w-full min-h-screen pt-10 lg:pt-0 flex flex-col gap-10 lg:gap-0 p-6 lg:p-0">
+        <header className="lg:fixed top-4 left-4 z-50 w-full items-center justify-between">
           <Link href="/" className="flex items-center gap-1">
             <ArrowLeft size={16} />
             Back
           </Link>
+          <p>
+            
+          </p>
         </header>
-        <hr />
         <section
           ref={containerRef}
-          className="flex flex-col w-full lg:gap-32 m-auto"
+          className="lg:flex flex-col w-full lg:gap-32 m-auto hidden"
         >
           {PageSections.map((section, index) => (
             <Section
@@ -55,6 +57,12 @@ const page: FC = () => {
           ))}
         </section>
         <Scrollspy top={top} activeSectionsIndices={activeSectionsIndices} />
+        <div className="lg:hidden">
+          <p className="text-sm">
+            [ Not optimized for small screens. Please switch to a larger
+            screen.]
+          </p>
+        </div>
       </main>
     </ReactLenis>
   );
