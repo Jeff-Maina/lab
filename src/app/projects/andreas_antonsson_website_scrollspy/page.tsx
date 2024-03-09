@@ -33,13 +33,20 @@ const page: FC = () => {
   return (
     <ReactLenis root options={{ lerp: 0.1 }}>
       <main className="max-w-5xl m-auto w-full min-h-screen pt-10 lg:pt-0 flex flex-col gap-10 lg:gap-0 p-6 lg:p-0">
-        <header className="lg:fixed top-4 left-4 z-50 w-full items-center justify-between">
+        <header className="lg:fixed flex top-4 left-4 z-50 w-full items-center justify-between lg:px-10">
           <Link href="/" className="flex items-center gap-1">
             <ArrowLeft size={16} />
             Back
           </Link>
-          <p>
-            
+          <p className="text-sm font-semibold tracking-tight hidden lg:block">
+            Recreating the Scrollspy from{" "}
+            <a
+              href="https://mrpops.ua/en"
+              target="_blank"
+              className="underline decoration-zinc-400 "
+            >
+              Andreas Antonsson's Website
+            </a>
           </p>
         </header>
         <section
