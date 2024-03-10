@@ -21,7 +21,7 @@ const Projects: FC<ProjectProps> = ({ areProjectsOpen, closeProjects }) => {
           exit="inactive"
           className="fixed z-50 inset-0 w-full h-screen p-4"
         >
-          <div className="w-full flex justify-center absolute top-0 p-4">
+          <div className="w-full flex justify-center absolute top-0 p-4 z-[999]">
             <motion.button
               variants={closeButtonVariants}
               initial="initial"

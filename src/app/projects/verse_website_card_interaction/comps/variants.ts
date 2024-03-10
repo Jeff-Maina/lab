@@ -27,8 +27,10 @@ export const closeButtonVariants = {
     active: {
         y: "0%",
         transition: {
-            delay: 0.4,
-            duration: 0.3
+            y: {
+                duration: 0.3,
+                delay: 0.7,
+            }
         }
     },
     inacitve: {
@@ -43,11 +45,15 @@ export const textVariants = {
     active: {
         y: "0%",
         transition: {
-            delay: 0.4,
-            duration: 0.3
+            y: {
+                duration: 0.3,
+                delay: 0.7,
+            }
         }
     },
     inacitve: {
         y: "0%",
     }
 }
+
+

@@ -5,7 +5,7 @@ import {
   NotesProjectCard,
   ThingsProjectCard,
   ThoughtsProjectCard,
-} from "./ProjectCard";
+} from "./ProjectCards";
 
 const ProjectsList: FC = () => {
   const [activeProjectIndex, setActiveProjectIndex] = useState(1000);
