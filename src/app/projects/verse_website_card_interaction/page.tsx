@@ -36,6 +36,7 @@ const page = () => {
           areProjectsOpen={areProjectsOpen}
         />
       </div>
+      <p className="text-white fixed select-none pointer-events-none bottom-4 right-4">[ work in progress ]</p>
     </main>
   );
 };
