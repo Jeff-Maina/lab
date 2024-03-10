@@ -21,7 +21,7 @@ const InputBox: FC<InputProps> = ({ closeInputBox, isReplying, replyText }) => {
         }}
         className="flex w-full bg-[#3a3a3a] gap-2 overflow-hidden"
       >
-        <div className="p-4 flex w-full h-full gap-2">
+        <div className="p-4  flex w-full h-full gap-2">
           <div>
             <Reply
               className="rotate-[180deg]"
@@ -30,7 +30,7 @@ const InputBox: FC<InputProps> = ({ closeInputBox, isReplying, replyText }) => {
               strokeWidth={3}
             />
           </div>
-          <div className="w-full h-20  overflow-y-scroll reply_box">
+          <div className="w-full max-h-24  overflow-y-scroll reply_box">
             <p className="text-white text-sm  leading-relaxed pr-2">
               {replyText}
             </p>

@@ -38,12 +38,12 @@ const page: FC = () => {
             <ArrowLeft size={16} />
             Back
           </Link>
-          <p className="text-sm font-semibold tracking-tight hidden lg:block">
+          <p className="text-sm font-semibold tracking-tight hidden lg:block text-zinc-600">
             Recreating the Scrollspy from{" "}
             <a
               href="https://www.andreasantonsson.dev/"
               target="_blank"
-              className="underline decoration-zinc-400 "
+              className="underline decoration-zinc-400 text-black"
             >
               Andreas Antonsson's Website
             </a>

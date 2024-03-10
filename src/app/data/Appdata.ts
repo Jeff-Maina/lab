@@ -42,10 +42,16 @@ export const ProjectsList: Array<ProjectProps> = [{
     draft: false,
     pageLink: "/projects/chat_gpt_reply_feature"
 }, {
-    project: "Andreas Antonsson website scrollspy",
+    project: "Andreas Antonsson's website scrollspy",
     dateCreated: "Saturday, 9 March 2024",
     draft: false,
     pageLink: "/projects/andreas_antonsson_website_scrollspy"
+},
+{
+    project: "Verse website card interaction",
+    dateCreated: "Sunday, 10 March 2024",
+    draft: false,
+    pageLink: "/projects/verse_website_card_interaction"
 }
 ]
 
