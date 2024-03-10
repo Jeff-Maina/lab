@@ -6,6 +6,13 @@ interface ProjectProps {
     closeProjects: () => void;
 }
 
+interface ProjectCardProps {
+    project: string,
+    activeProjectIndex: number,
+    updateActiveProjectIndex: (index: number) => void,
+    index: number,
+}
+
 export type {
-    ButtonProps,ProjectProps
+    ButtonProps, ProjectProps, ProjectCardProps
 }
