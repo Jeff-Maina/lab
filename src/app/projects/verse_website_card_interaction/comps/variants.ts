@@ -29,7 +29,7 @@ export const closeButtonVariants = {
         transition: {
             y: {
                 duration: 0.3,
-                delay: 0.7,
+                delay: 1,
             }
         }
     },
@@ -47,7 +47,7 @@ export const textVariants = {
         transition: {
             y: {
                 duration: 0.3,
-                delay: 0.7,
+                delay: 1,
             }
         }
     },

@@ -52,6 +52,12 @@ export const ProjectsList: Array<ProjectProps> = [{
     dateCreated: "Sunday, 10 March 2024",
     draft: false,
     pageLink: "/projects/verse_website_card_interaction"
+},
+{
+    project: "Moxion's progress indicator",
+    dateCreated: "Sunday, 10 March 2024",
+    draft: false,
+    pageLink: "/projects/moxions_progress_indicator"
 }
 ]
 
