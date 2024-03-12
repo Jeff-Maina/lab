@@ -4,7 +4,10 @@ import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const path = usePathname();
-  const pages = ["/projects/verse_website_card_interaction"];
+  const pages = [
+    "/projects/verse_website_card_interaction",
+    "/projects/nomad_menu_interaction",
+  ];
   const isAllowed = pages.includes(path);
   return (
     <>

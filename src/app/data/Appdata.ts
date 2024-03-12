@@ -64,6 +64,12 @@ export const ProjectsList: Array<ProjectProps> = [{
     dateCreated: "Monday, 11 March 2024",
     draft: false,
     pageLink: "/projects/grid_hover_concept"
+},
+{
+    project: "Nomad's menu interaction",
+    dateCreated: "Tuesday, 12 March 2024",
+    draft: false,
+    pageLink: "/projects/nomad_menu_interaction"
 }
 ]
 
