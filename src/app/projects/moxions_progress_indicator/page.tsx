@@ -13,7 +13,7 @@ const Steps = [
   },
   {
     task: "Deliver",
-    description: "We'll get it wheree you need it, all charged up.",
+    description: "We'll get it where you need it, all charged up.",
   },
   {
     task: "Monitor",
