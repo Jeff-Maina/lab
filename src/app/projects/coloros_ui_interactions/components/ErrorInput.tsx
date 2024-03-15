@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useAnimate } from "framer-motion";
-import { Delete, Lock } from "lucide-react";
+import { ArrowRight, Delete, Lock } from "lucide-react";
 import { FC, useState } from "react";
 
 const numbers = [1, 2, 3, 4, 6, 5, 7, 8, 9];
@@ -61,7 +61,7 @@ const PinInput: FC<InputProps> = ({ isPasswordCorrect, activeIndex }) => {
                 opacity: 1,
               }}
               animate={{
-                y: isPasswordCorrect ? 0 : 50,
+                y: isPasswordCorrect ? 0 : 60,
                 opacity: isPasswordCorrect ? 1 : 0,
               }}
               transition={{
@@ -150,8 +150,11 @@ const ErrorInput = () => {
   };
 
   return (
-    <div className="w-full max-w-sm">
-      <p className="text-2xl font-bold tracking-tighter">Password input.</p>
+    <div className="w-full max-w-sm h-screen flex flex-col justify-center">
+      <div className="flex items-center gap-2">
+        <ArrowRight strokeWidth={4} className="stroke-zinc-400" size={18} />
+        <p className="text-2xl font-bold tracking-tighter">Password input.</p>
+      </div>
       <br />
       <div className="w-full max-w-sm  h-[40rem] isolate relative">
         <img
@@ -162,7 +165,7 @@ const ErrorInput = () => {
         />
         <div className="w-full h-full bg-black/80 flex flex-col items-center p-10 justify-between pb-6">
           <div className="flex flex-col gap-6 items-center">
-            <Lock stroke="#fff" fill="transparent" strokeWidth={3} />
+            <Lock stroke="#fff" fill="transparent" strokeWidth={3} size={20} />
             <p className="text-[#e4e4e4] font-medium text-lg w-full text-center leading-none">
               {promptText}
             </p>
@@ -189,7 +192,7 @@ const ErrorInput = () => {
               </div>
               <div className="grid grid-cols-3 mt-6 gap-4">
                 <div></div>
-                <div className="w-full flex justify-center">
+                <div className="w-full flex justify-center text-2xl">
                   <CharButton onClick={clickButton}>
                     <span>0</span>
                   </CharButton>
