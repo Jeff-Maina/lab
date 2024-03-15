@@ -1,24 +1,96 @@
 "use client";
 
-import { useAnimate } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 import { Delete, Lock } from "lucide-react";
 import { FC, useState } from "react";
 
 const numbers = [1, 2, 3, 4, 6, 5, 7, 8, 9];
+const pin = [0, 0, 0, 0];
 
 interface ButtonProps {
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   children: JSX.Element;
-  updateActiveIndex?: (index: number) => void;
-  activeIndex: number;
-  isDelete: boolean;
 }
 
-const Button: FC<ButtonProps> = ({
-  children,
-  updateActiveIndex,
-  activeIndex,
-  isDelete,
-}) => {
+interface InputProps {
+  isPasswordCorrect: boolean;
+  activeIndex: number;
+}
+
+const CharButton: FC<ButtonProps> = ({ onClick, children }) => {
+  return (
+    <button
+      onClick={(e) => {
+        onClick(e);
+      }}
+      className="grid place-items-center w-10 aspect-square rounded-full relative isolate select-none"
+    >
+      {children}
+    </button>
+  );
+};
+
+const PinInput: FC<InputProps> = ({ isPasswordCorrect, activeIndex }) => {
+  return (
+    <motion.div
+      initial={{
+        x: 0,
+      }}
+      animate={{
+        x: isPasswordCorrect ? 0 : [15, -15, 5, -5, 0],
+      }}
+      transition={{
+        duration: 0.6,
+      }}
+      className="flex items-center gap-2 mt-4"
+    >
+      {pin.map((_, index) => {
+        const isThird = index === 2;
+        const isFourth = index === 3;
+        return (
+          <div
+            key={index}
+            style={{
+              backgroundColor: "#234b53",
+            }}
+            className="size-2 rounded-full relative grid place-items-center"
+          >
+            <motion.div
+              initial={{
+                y: 0,
+                opacity: 1,
+              }}
+              animate={{
+                y: isPasswordCorrect ? 0 : 50,
+                opacity: isPasswordCorrect ? 1 : 0,
+              }}
+              transition={{
+                duration: isPasswordCorrect ? 0 : 0.6,
+                delay: isThird ? 0.3 : isFourth ? 0.2 : 0.1 * index,
+              }}
+              style={{
+                backgroundColor: index < activeIndex ? "#fff" : "#234b53",
+              }}
+              className="w-full h-full rounded-full bg-white "
+            ></motion.div>
+          </div>
+        );
+      })}
+    </motion.div>
+  );
+};
+
+const ErrorInput = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const updateActiveIndex = (index: number) => setActiveIndex(index);
+  const [isPasswordCorrect, setPasswordCorrect] = useState(true);
+  const [isAnimationOn, setAnimationOn] = useState(false);
+
+  const promptText = isPasswordCorrect
+    ? "Enter password"
+    : "Incorrect password.Try again.";
+
+  // button animation;
   const [scope, animate] = useAnimate();
 
   const bubbleClass =
@@ -31,56 +103,55 @@ const Button: FC<ButtonProps> = ({
         opacity: 0,
         height: 100,
         width: 100,
-        // scale: 5,
       },
-      {
-        duration: 0.4,
-      }
+      { duration: 0.4 }
     );
   };
 
-  const clickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const animateClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const bubble = document.createElement("div");
     bubble.className = bubbleClass;
     const el = e.currentTarget as HTMLElement;
     el.appendChild(bubble);
     animateBubbleClick(bubble);
-
-    if (updateActiveIndex && !isDelete) {
-      const newIndex = activeIndex < 4 ? activeIndex + 1 : activeIndex;
-      updateActiveIndex(newIndex);
-    } 
-    if (isDelete === true) {
-      const newIndex = activeIndex > 0 ? activeIndex - 1 : activeIndex;
-      if (updateActiveIndex) {
-        updateActiveIndex(newIndex);
-        console.log(newIndex);
-      }
-    }
     setTimeout(() => {
       bubble.remove();
     }, 310);
   };
-  return (
-    <button
-      onClick={(e) => clickButton(e)}
-      className="grid place-items-center w-10 aspect-square rounded-full relative isolate"
-    >
-      {children}
-    </button>
-  );
-};
 
-const ErrorInput = () => {
-  const [pin, setPin] = useState([0, 0, 0, 0]);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const updateActiveIndex = (index: number) => setActiveIndex(index);
+  const clickButton = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (isAnimationOn) return;
+
+    animateClick(e);
+
+    if (isPasswordCorrect === false) {
+      setPasswordCorrect(true);
+      updateActiveIndex(1);
+      return;
+    }
+
+    const newIndex = activeIndex < 4 ? activeIndex + 1 : activeIndex;
+    updateActiveIndex(newIndex);
+
+    if (activeIndex === 3) {
+      setPasswordCorrect(false);
+      setAnimationOn(true);
+      setTimeout(() => {
+        setAnimationOn(false);
+      }, 600);
+    }
+  };
+
+  // deleting a character;
+  const deleteChar = (e: React.MouseEvent<HTMLButtonElement>) => {
+    animateClick(e);
+    const newIndex = activeIndex > 0 ? activeIndex - 1 : activeIndex;
+    updateActiveIndex(newIndex);
+  };
 
   return (
     <div className="w-full max-w-sm">
-      <p className="text-2xl font-bold tracking-tighter">
-        Password input.{activeIndex}
-      </p>
+      <p className="text-2xl font-bold tracking-tighter">Password input.</p>
       <br />
       <div className="w-full max-w-sm  h-[40rem] isolate relative">
         <img
@@ -92,20 +163,13 @@ const ErrorInput = () => {
         <div className="w-full h-full bg-black/80 flex flex-col items-center p-10 justify-between pb-6">
           <div className="flex flex-col gap-6 items-center">
             <Lock stroke="#fff" fill="transparent" strokeWidth={3} />
-            <p className="text-[#e4e4e4] font-medium text-lg">Enter Password</p>
-            <div className="flex items-center gap-2 mt-4">
-              {pin.map((_, index) => {
-                return (
-                  <div
-                    key={index}
-                    style={{
-                      backgroundColor: index < activeIndex ? "#fff" : "000",
-                    }}
-                    className="size-3 rounded-full bg-[#234b53]"
-                  ></div>
-                );
-              })}
-            </div>
+            <p className="text-[#e4e4e4] font-medium text-lg w-full text-center leading-none">
+              {promptText}
+            </p>
+            <PinInput
+              isPasswordCorrect={isPasswordCorrect}
+              activeIndex={activeIndex}
+            />
           </div>
           <div className="w-full flex flex-col gap-6 text-[#e4e4e4]">
             <div className="w-full">
@@ -116,13 +180,9 @@ const ErrorInput = () => {
                       key={index}
                       className="text-2xl grid place-items-center"
                     >
-                      <Button
-                        isDelete={false}
-                        activeIndex={activeIndex}
-                        updateActiveIndex={updateActiveIndex}
-                      >
+                      <CharButton onClick={clickButton}>
                         <span>{number}</span>
-                      </Button>
+                      </CharButton>
                     </div>
                   );
                 })}
@@ -130,18 +190,14 @@ const ErrorInput = () => {
               <div className="grid grid-cols-3 mt-6 gap-4">
                 <div></div>
                 <div className="w-full flex justify-center">
-                  <Button
-                    isDelete={false}
-                    activeIndex={activeIndex}
-                    updateActiveIndex={updateActiveIndex}
-                  >
-                    <span className="text-2xl">0</span>
-                  </Button>
+                  <CharButton onClick={clickButton}>
+                    <span>0</span>
+                  </CharButton>
                 </div>
                 <div className="w-full flex justify-center">
-                  <Button activeIndex={activeIndex} isDelete={true}>
+                  <CharButton onClick={deleteChar}>
                     <Delete size={20} />
-                  </Button>
+                  </CharButton>
                 </div>
               </div>
             </div>
