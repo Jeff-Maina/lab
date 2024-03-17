@@ -6,6 +6,7 @@ import ErrorInput from "./components/ErrorInput";
 import BrightnessIndicator from "./components/BrightnessIndicator";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { FC } from "react";
+import FloatingWindow from "./components/FloatingWindow/FloatingWindow";
 
 const arr = [1, 2, 3];
 
@@ -13,7 +14,7 @@ const Divide: FC = () => {
   return (
     <div className="flex items-center gap-1">
       {arr.map((_, index) => (
-        <div className="size-1 rounded-full bg-zinc-500"></div>
+        <div key={index} className="size-1 rounded-full bg-zinc-500"></div>
       ))}
     </div>
   );
@@ -37,6 +38,7 @@ const page = () => {
           <Divide />
           <BrightnessIndicator />
           <Divide />
+          <FloatingWindow />
         </section>
       </main>
     </ReactLenis>
