@@ -24,7 +24,7 @@ const page = () => {
   return (
     <ReactLenis root>
       <main className="w-full min-h-screen">
-        <nav className="w-full flex items-center justify-between p-6 fixed top-0">
+        <nav className="w-full flex items-center justify-between p-6 fixed top-0 z-[999]">
           <Link href="/" className="flex items-center gap-2 text-sm">
             <ArrowLeft size={16} />
             Back

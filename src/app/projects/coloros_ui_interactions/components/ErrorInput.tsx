@@ -152,11 +152,12 @@ const ErrorInput = () => {
   return (
     <div className="w-full max-w-sm h-screen flex flex-col justify-center">
       <div className="flex items-center gap-2">
-        <ArrowRight strokeWidth={4} className="stroke-zinc-400" size={18} />
-        <p className="text-2xl font-bold tracking-tighter">Password input.</p>
+        <ArrowRight strokeWidth={4} className="stroke-zinc-400" size={16} />
+        <p className="text-xl font-bold tracking-tighter">Password input.</p>
       </div>
       <br />
-      <div className="w-full max-w-sm  h-[40rem] isolate relative">
+      <br />
+      <div className="w-full max-w-sm  h-[42rem] isolate relative rounded-xl overflow-hidden">
         <img
           src="/images/building.jpg"
           className="absolute inset-0 h-full w-full object-cover -z-[10] select-none pointer-events-none"

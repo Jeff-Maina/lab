@@ -21,7 +21,7 @@ const Projects: FC = () => {
               <li
                 onMouseEnter={() => hoverProject(index)}
                 onClick={() => hoverProject(index)}
-                className={` p-3 md:px-6 md:pl-10 rounded-[0.7rem] cursor-pointer relative`}
+                className={` p-3 md:px-6  rounded-[0.7rem] cursor-pointer relative`}
               >
                 <div className="flex flex-col-reverse w-full gap-2 md:gap-4 md:flex-row md:items-center relative z-10">
                   <p className="min-w-fit">{project.project}.</p>
@@ -35,11 +35,11 @@ const Projects: FC = () => {
                   <motion.div
                     layoutId="indicator"
                     transition={{
-                      duration: 0.1,
+                      duration: 0.2,
                     }}
-                    className={`absolute bg-zinc-100 inset-0 w-full h-full rounded-xl opacity-0 group-hover/projects:opacity-100 transition-opacity duration-300 flex items-center md:pl-3 text-xs text-zinc-600`}
+                    className={`absolute bg-zinc-100 inset-0 w-full h-full rounded-xl opacity-0 group-hover/projects:opacity-100 transition-opacity duration-300 flex items-center text-xs text-zinc-600`}
                   >
-                    <span className="hidden md:block">0{index + 1}</span>
+                    {/* <span className="hidden md:block">0{index + 1}</span> */}
                   </motion.div>
                 )}
               </li>

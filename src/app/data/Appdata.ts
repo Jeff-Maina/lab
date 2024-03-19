@@ -76,6 +76,12 @@ export const ProjectsList: Array<ProjectProps> = [{
     dateCreated: "Thursday, 14 March 2024",
     draft: false,
     pageLink: "/projects/coloros_ui_interactions"
+},
+{
+    project: "Daybreak mobile menu",
+    dateCreated: "Tuesday,19 March 2024",
+    draft: false,
+    pageLink: "/projects/madebydaybreak_mobile_menu"
 }
 ]
 

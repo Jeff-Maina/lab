@@ -60,13 +60,13 @@ const FloatingWindow = () => {
   return (
     <div className="w-full max-w-sm h-screen flex flex-col justify-center">
       <div className="flex items-center gap-2">
-        <ArrowRight strokeWidth={4} className="stroke-zinc-400" size={18} />
-        <p className="text-2xl font-bold tracking-tighter">Floating window.</p>
+        <ArrowRight strokeWidth={4} className="stroke-zinc-400" size={16} />
+        <p className="text-xl font-bold tracking-tighter">Floating window.</p>
       </div>
       <br />
       <div
         ref={screenRef}
-        className="w-full max-w-sm  h-[40rem] isolate relative overflow-hidden"
+        className="w-full max-w-sm  h-[40rem] isolate relative rounded-xl overflow-hidden"
       >
         <img
           draggable="false"

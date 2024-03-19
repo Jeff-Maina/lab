@@ -18,15 +18,15 @@ const BrightnessIndicator: FC = () => {
     // console.log(opacity.get());
   });
   return (
-    <div className="w-full max-w-sm h-screen flex flex-col justify-center">
+    <div className="w-full max-w-sm h-screen flex flex-col justify-center ">
       <div className="flex items-center gap-2">
-        <ArrowRight strokeWidth={4} className="stroke-zinc-400" size={18} />
-        <p className="text-2xl font-bold tracking-tighter">
+        <ArrowRight strokeWidth={4} className="stroke-zinc-400" size={16} />
+        <p className="text-xl font-bold tracking-tighter">
           Brightness Slider.
         </p>
       </div>
       <br />
-      <div className="w-full max-w-sm  h-[40rem] isolate relative">
+      <div className="w-full max-w-sm  h-[40rem] isolate relative rounded-xl overflow-hidden">
         <img
           src="/images/building.jpg"
           alt=""
