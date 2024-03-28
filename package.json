@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.45",
+    "@vercel/analytics": "^1.2.2",
     "framer-motion": "^11.0.8",
     "geist": "^1.2.2",
     "gsap": "^3.12.5",

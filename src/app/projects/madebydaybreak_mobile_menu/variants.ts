@@ -3,11 +3,13 @@ export const MenuVariants = {
         height: 56,
         width: 56,
         y: 0,
+        borderRadius: "5rem"
     },
     active: {
         height: 350,
         width: 370,
         y: 80,
+        borderRadius: "1.5rem",
         transition: {
             height: {
                 duration: 0.5,
@@ -21,6 +23,9 @@ export const MenuVariants = {
             y: {
                 duration: 0.5,
                 ease: "easeOut",
+            }, borderRadius: {
+                duration: 0.5,
+                ease: "easeOut",
             },
         },
     },
@@ -28,6 +33,7 @@ export const MenuVariants = {
         height: 56,
         width: 56,
         y: 0,
+        borderRadius: "5rem",
         transition: {
             height: {
                 duration: 0.5,
@@ -39,6 +45,10 @@ export const MenuVariants = {
                 duration: 0.5,
 
             }
+            , borderRadius: {
+                duration: 0.5,
+                ease: "easeOut",
+            },
         },
     },
 };

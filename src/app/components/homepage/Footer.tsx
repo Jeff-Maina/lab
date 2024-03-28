@@ -7,6 +7,7 @@ const Footer = () => {
   const pages = [
     "/projects/verse_website_card_interaction",
     "/projects/nomad_menu_interaction",
+    "/projects/framers_drag_to_reorder"
   ];
   const isAllowed = pages.includes(path);
   return (
