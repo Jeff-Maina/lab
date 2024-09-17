@@ -39,7 +39,7 @@ const page: FC = () => {
         <div onClick={(e) => e.stopPropagation()} className="relative">
           <button
             onClick={toggleDropdown}
-            className="bg-[#222326] font-semibold text-white py-3 px-6 flex items-center gap-1 rounded-[15px]"
+            className="bg-[#0d0d0e] font-semibold text-white py-3 px-6 flex items-center gap-1 rounded-[10px]"
           >
             Browse
             <ChevronDown

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +19,10 @@ html {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+.nunito-font {
+  font-family: Nunito;
 }
 
 #mask {
@@ -44,3 +50,12 @@ body::-webkit-scrollbar {
 .custom_shadow {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+.block_card {
+  @apply flex flex-col gap-1 w-full;
+}
+
+.block_label {
+  @apply text-xs group-hover/card:text-neutral-700 text-white  blur group-hover/card:opacity-100 group-hover/card:blur-none transition-all duration-700 select-none;
+}
+

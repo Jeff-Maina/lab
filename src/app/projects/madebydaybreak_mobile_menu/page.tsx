@@ -1,7 +1,15 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, Plus } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  CreditCard,
+  File,
+  LogOut,
+  MessageCircle,
+  Plus,
+} from "lucide-react";
 import Link from "next/link";
 import { useState, FC } from "react";
 import { ButtonProps, MaskVariants, MenuVariants } from "./variants";
@@ -72,14 +80,71 @@ const page = () => {
                   isMenuActive ? "scale-100" : "scale-0"
                 } transition-transform duration-[500ms]`}
               ></div>
-              <Plus className="relative z-10" />
+              <Plus className="relative z-10 select-none pointer-events-none" />
             </motion.button>
             <motion.div
               variants={MenuVariants}
               initial="initial"
               animate={isMenuActive ? "active" : "inactive"}
-              className=" absolute bg-white bottom-0 rounded-[2rem]"
-            ></motion.div>
+              className=" absolute bg-white bottom-0 rounded-[2rem] overflow-hidden"
+            >
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: isMenuActive ? 1 : 0,
+                }}
+                transition={{
+                  delay: isMenuActive ? 0.35 : 0,
+                  duration: isMenuActive ? 0.25 : 0,
+                }}
+                className="w-full h-full  p-6 flex flex-col justify-between"
+              >
+                <div className="w-full h-full bg-white">
+                  <div className="w-full grid grid-cols-2 gap-2">
+                    <div className="w-full h-[7rem] rounded-lg bg-neutral-100 flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-neutral-200 transition">
+                      <span>
+                        <ArrowRight size={18} />
+                      </span>
+                      <p className="tracking-tight text-neutral-700">
+                        Send Money
+                      </p>
+                    </div>
+                    <div className="w-full h-[7rem] rounded-lg bg-neutral-100 flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-neutral-200 transition">
+                      <span>
+                        <Plus size={18} />
+                      </span>
+                      <p className="tracking-tight text-neutral-700">
+                        Add Money
+                      </p>
+                    </div>
+                    <div className="w-full h-[7rem] rounded-lg bg-neutral-100 flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-neutral-200 transition">
+                      <span>
+                        <File size={18} />
+                      </span>
+                      <p className="tracking-tight text-neutral-700">
+                        Invoices
+                      </p>
+                    </div>
+                    <div className="w-full h-[7rem] rounded-lg bg-neutral-100 flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-neutral-200 transition-200">
+                      <span>
+                        <CreditCard size={18} />
+                      </span>
+                      <p className="tracking-tight text-neutral-700">My Card</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full flex items-center justify-between">
+                  <div className="size-10 rounded-full bg-neutral-100 grid place-items-center cursor-pointer hover:bg-neutral-200 transition-200">
+                    <MessageCircle size={16} />
+                  </div>
+                  <div className="size-10 rounded-full bg-neutral-100 grid place-items-center cursor-pointer hover:bg-neutral-200 transition-200">
+                    <LogOut size={16} />
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

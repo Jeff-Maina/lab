@@ -21,3 +21,4 @@ export function usePointerPosition(ref: RefObject<HTMLElement>) {
 
   return point;
 }
+

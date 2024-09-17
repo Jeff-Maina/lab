@@ -3,84 +3,165 @@ type ProjectProps = {
     dateCreated: string,
     draft: boolean,
     pageLink: string,
+    type: string,
+    archived: boolean,
 }
 
 export const ProjectsList: Array<ProjectProps> = [{
     project: "Masterclass dropdown menu",
     dateCreated: "Saturday, 2 March 2024",
     draft: false,
-    pageLink: "/projects/masterclass_dropdown"
+    pageLink: "/projects/masterclass_dropdown",
+    type: 'r',
+    archived: true,
 }, {
     project: "Recreating the Gallery Hover Effect from Mr. Pops' Website",
     dateCreated: "Sunday, 3 March 2024",
     draft: false,
-    pageLink: "/projects/mr_pops_gallery_hover"
+    pageLink: "/projects/mr_pops_gallery_hover",
+    type: 'r',
+    archived: false,
 }, {
-    project: "Raphael Salaja's navigation bar concept from twitter",
+    project: "Raphael Salaja's navigation bar concept",
     dateCreated: "Sunday, 3 March 2024",
     draft: false,
-    pageLink: "/projects/raphael_salaja_navigation_bar_concept"
+    pageLink: "/projects/raphael_salaja_navigation_bar_concept",
+    type: 'r',
+    archived: false,
 }, {
     project: "Fixed vertical navigation bar (scrollspy)",
     dateCreated: "Monday, 4 March 2024",
     draft: false,
-    pageLink: "/projects/fixed_vertical_navigation_bar"
+    pageLink: "/projects/fixed_vertical_navigation_bar",
+    type: 'c',
+    archived: false,
 }, {
     project: "Framer motion velocity-based animation",
     dateCreated: "Monday, 4 March 2024",
     draft: true,
-    pageLink: "/projects/framer_motion_velocity"
+    pageLink: "/projects/framer_motion_velocity",
+    type: 'c',
+    archived: false,
 }, {
     project: "Vercel's navigation bar",
     dateCreated: "Thursday, 7 March 2024",
     draft: false,
-    pageLink: "/projects/vercels_navbar"
+    pageLink: "/projects/vercels_navbar",
+    type: 'r',
+    archived: false,
 }
     , {
     project: "Chat GPT's reply feature",
     dateCreated: "Friday, 8 March 2024",
     draft: false,
-    pageLink: "/projects/chat_gpt_reply_feature"
+    pageLink: "/projects/chat_gpt_reply_feature",
+    type: 'r',
+    archived: true,
 }, {
     project: "Andreas Antonsson's website scrollspy",
     dateCreated: "Saturday, 9 March 2024",
     draft: false,
-    pageLink: "/projects/andreas_antonsson_website_scrollspy"
+    pageLink: "/projects/andreas_antonsson_website_scrollspy",
+    type: 'r',
+    archived: false,
 },
 {
     project: "Verse website card interaction",
     dateCreated: "Sunday, 10 March 2024",
     draft: false,
-    pageLink: "/projects/verse_website_card_interaction"
+    pageLink: "/projects/verse_website_card_interaction",
+    type: 'r',
+    archived: false,
 },
 {
     project: "Moxion's progress indicator",
     dateCreated: "Monday, 11 March 2024",
     draft: false,
-    pageLink: "/projects/moxions_progress_indicator"
+    pageLink: "/projects/moxions_progress_indicator",
+    type: 'r',
+    archived: true,
 },
 {
     project: "Grid Hover Concept",
     dateCreated: "Monday, 11 March 2024",
     draft: false,
-    pageLink: "/projects/grid_hover_concept"
+    pageLink: "/projects/grid_hover_concept",
+    type: 'c',
+    archived: false,
 },
 {
     project: "Nomad's menu interaction",
     dateCreated: "Tuesday, 12 March 2024",
     draft: true,
-    pageLink: "/projects/nomad_menu_interaction"
-},
-{
-    project: "ColorOs UI Interactions.",
-    dateCreated: "Thursday, 14 March 2024",
-    draft: false,
-    pageLink: "/projects/coloros_ui_interactions"
+    pageLink: "/projects/nomad_menu_interaction",
+    type: 'r',
+    archived: false,
 },
 {
     project: "Daybreak mobile menu",
     dateCreated: "Tuesday,19 March 2024",
     draft: false,
-    pageLink: "/projects/madebydaybreak_mobile_menu"
-}]
+    pageLink: "/projects/madebydaybreak_mobile_menu",
+    type: 'r',
+    archived: true,
+}, {
+    project: "Upwork's carousel",
+    dateCreated: "Friday,26 April 2024",
+    draft: true,
+    pageLink: "/projects/upworks_carousel",
+    type: 'r',
+    archived: false,
+}, {
+    project: "Numbers animation using Framer Motion",
+    dateCreated: "Wednesday,5 June 2024",
+    draft: false,
+    pageLink: "/projects/numbers_animation",
+    type: 'c',
+    archived: false,
+}, {
+    project: "Counter animation using Framer Motion",
+    dateCreated: "Thursday,13 June 2024",
+    draft: true,
+    pageLink: "/projects/counter_animation",
+    type: 'c',
+    archived: false,
+}, {
+    project: "Instagram's Double Tap reaction",
+    dateCreated: "Monday,15 July 2024",
+    draft: false,
+    pageLink: "/projects/instagram_double_tap_reaction",
+    type: 'r',
+    archived: false,
+}, {
+    project: "ColorOS dismiss notification interaction",
+    dateCreated: "Monday,15 July 2024",
+    draft: true,
+    pageLink: "/projects/coloros_dismiss_notification_interaction",
+    type: 'r',
+    archived: false,
+}, {
+    project: "Instagram reply message interaction",
+    dateCreated: "Tuesday,16 July 2024",
+    draft: true,
+    pageLink: "/projects/instagram_message_reply_interaction",
+    type: 'r',
+    archived: false,
+}, {
+    project: "Niagara launcher's alphabet interaction",
+    dateCreated: "Tuesday,16 July 2024",
+    draft: false,
+    pageLink: "/projects/niagara_launchers_alphabet_interaction",
+    type: 'r',
+    archived: false,
+}, {
+    project: "Hover concept",
+    dateCreated: "Tuesday,16 July 2024",
+    draft: false,
+    pageLink: "/projects/hover_concept",
+    type: 'r',
+    archived: false,
+}
+]
 
+
+// 

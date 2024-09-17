@@ -1,19 +1,38 @@
 "use client";
 
 import { ProjectsList } from "@/app/data/Appdata";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { FC, useState } from "react";
+import { motion, useInView } from "framer-motion";
 
-const FinishedProjects = ProjectsList.filter((project) => !project.draft);
+import { FC, useEffect, useRef, useState } from "react";
 
-const Projects: FC = () => {
+const FinishedProjects = ProjectsList.filter(
+  (project) => !project.draft && !project.archived && project.type === "r"
+);
+
+interface SectionProps {
+  updateActiveSection: (value: number) => void;
+}
+
+const Recreations: FC<SectionProps> = ({ updateActiveSection }) => {
   const [hoveredProjectIndex, setHoveredProjectIndex] = useState<number>(1000);
   const hoverProject = (index: number) => setHoveredProjectIndex(index);
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.4 });
+
+  useEffect(() => {
+    if (isInView) {
+      updateActiveSection(0);
+    }
+  }, [isInView]);
+
   return (
-    <section>
-      <ul className="flex flex-col w-full group/projects">
+    <section ref={ref} id="recreations">
+      <h1 className="font-bold tracking-tight text-xl p-3 md:px-6">
+        Recreations
+      </h1>
+      <ul className="flex flex-col w-full group/recreations">
         {FinishedProjects.map((project, index) => {
           const isHovered = index === hoveredProjectIndex;
           return (
@@ -21,7 +40,7 @@ const Projects: FC = () => {
               <li
                 onMouseEnter={() => hoverProject(index)}
                 onClick={() => hoverProject(index)}
-                className={` p-3 md:px-6  rounded-[0.7rem] cursor-pointer relative`}
+                className={` p-3 md:px-6   rounded-[0.7rem] cursor-pointer relative`}
               >
                 <div className="flex flex-col-reverse w-full gap-2 md:gap-4 md:flex-row md:items-center relative z-10">
                   <p className="min-w-fit">{project.project}.</p>
@@ -33,14 +52,12 @@ const Projects: FC = () => {
 
                 {isHovered && (
                   <motion.div
-                    layoutId="indicator"
+                    layoutId="r_indicator"
                     transition={{
                       duration: 0.2,
                     }}
-                    className={`absolute bg-zinc-100 inset-0 w-full h-full rounded-xl opacity-0 group-hover/projects:opacity-100 transition-opacity duration-300 flex items-center text-xs text-zinc-600`}
-                  >
-                    {/* <span className="hidden md:block">0{index + 1}</span> */}
-                  </motion.div>
+                    className={`absolute bg-zinc-100 inset-0 w-full h-full rounded-xl opacity-0 group-hover/recreations:opacity-100 transition-opacity duration-300 flex items-center text-xs text-zinc-600`}
+                  ></motion.div>
                 )}
               </li>
             </Link>
@@ -51,4 +68,4 @@ const Projects: FC = () => {
   );
 };
 
-export default Projects;
+export default Recreations;
