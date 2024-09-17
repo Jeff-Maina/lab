@@ -60,7 +60,7 @@ export const components: Array<component_props> = [
   },
   {
     label: "Apple watch menu",
-    draft: false,
+    draft: true,
     created_on: "Mon, Sep 16",
     component: <AppleWatchApps />,
   },
