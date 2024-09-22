@@ -6,6 +6,7 @@ import GmailInteraction from "../comps/gmail_archive_interaction/gmail_archive_i
 import IgReplyMessage from "../comps/ig-reply-message/ig-reply-message";
 import InstagramVanishMode from "../comps/instagram_enter_vanish_mode/instagram_vanish_mode";
 import TelegramSlider from "../comps/telegrams_slider/telegrams_slider";
+import UbuntuAppDirectory from "../comps/ubuntu_app_directory/ubuntu_app_directory";
 
 interface component_props {
   label: string;
@@ -59,9 +60,9 @@ export const components: Array<component_props> = [
     component: <ColorOsEnterPassword />,
   },
   {
-    label: "Apple watch menu",
-    draft: true,
+    label: "Ubuntu app directory",
+    draft: false,
     created_on: "Mon, Sep 16",
-    component: <AppleWatchApps />,
+    component: <UbuntuAppDirectory />,
   },
 ];
